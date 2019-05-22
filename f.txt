@@ -1,0 +1,17 @@
+#	f			Nome	clocks/periodo da onda
+------------------------------
+0 = 349.23hz	F4		143172
+1 = 369.99hz	F4#		135139
+2 = 392.00hz	G4		127551
+3 = 415.30hz	G4#		120394
+4 = 440.00hz	A4		113636
+5 = 466.16hz	A4#		107262
+6 = 493.88hz	B4		101239
+7 = 523.25hz	C5		095557
+8 = 554.37hz	C5#		090192
+9 = 587.33hz	D5		085131
+
+frequencia de amostragem da sample = 8xf(D5)
+período de amostragem da sample
+
+registrador counter requer 18bits
