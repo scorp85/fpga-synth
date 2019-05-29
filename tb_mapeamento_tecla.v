@@ -1,7 +1,7 @@
 `include "mapeamento_tecla_cp.v"
 module tb;
 	reg [10-1:0] teclas;
-	wire [18-1:0] cp;
+	wire [10-1:0][18-1:0] cp;
 
 	mapeamento_tecla_cp ins(teclas, cp);
 
