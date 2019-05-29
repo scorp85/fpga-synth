@@ -1,4 +1,4 @@
-#	f			Nome	clocks/periodo da onda
+#	f			Nome	clock tick/periodo da onda
 ------------------------------
 0 = 349.23hz	F4		143172
 1 = 369.99hz	F4#		135139

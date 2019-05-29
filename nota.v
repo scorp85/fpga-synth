@@ -6,7 +6,7 @@ module nota(ativado, clk, saida);
 	reg[17:0] counter;
 	reg[2:0] index;
 	wire[7:0] saidaSample;
-	parameter cp = 113636; //440hz
+	parameter CP = 'd113636;
 	//Instanciar sample
 	sample s(index, clk, saidaSample);
 
@@ -17,7 +17,7 @@ module nota(ativado, clk, saida);
 
 	always @(posedge clk & ativado) begin
 		counter  = counter + 1;
-		//index = counter*resolucao/cp;
+		//index = floor(counter*resolucao/cp);
 		//saida = s[index]
 		if(counter == cp)
 			counter = 0
