@@ -1,0 +1,29 @@
+module rom_sample
+#(
+	parameter SAMPLE_WIDTH = 8,
+	parameter SAMPLE_SIZE = 128,
+	parameter START_ADDR = 0,
+	parameter END_ADDR = SAMPLE_SIZE
+)
+(
+	input [7:0]play, notas,
+	output reg [SAMPLE_WIDTH-1:0]data
+);
+
+	reg [6:0]addr[0:7];
+	reg [SAMPLE_WIDTH-1:0]rom[0:SAMPLE_SIZE-1];
+	reg [2:0]divisor;
+	reg [10:0]soma;
+	
+	assign divisor = play[0] + play[1] + play[2] + play[3] + play[4] + play[5] + play[6] + play[7];
+	
+	
+	initial begin
+		$readmemh("samples_hex.mem", rom, [START_ADDR], [END_ADDR]);
+	end
+
+	always @* begin
+		
+	end
+	
+endmodule

@@ -1,0 +1,22 @@
+module codeword_processor
+(
+	input CLOCK_50,
+	input [7:0]CODEWORD,
+	output reg [7:0]teclas	
+);
+
+	reg f0;
+	initial begin
+		f0 = 0;
+		teclas = 8'h0;
+	always @(posedge CLOCK_50)begin
+		if (CODEWORD == 8'h1C)begin //A
+			if(~f0)
+				teclas[0] <= 1;
+			else begin
+				f0 <= 0;
+				teclas[0] <= 0;
+			end
+		end
+	end
+endmodule

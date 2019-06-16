@@ -1,0 +1,13 @@
+module gerador_notas
+#(
+	parameter CLOCK = 50000000,
+	parameter SAMPLE_SIZE = 120
+)
+(
+	input clk,
+	output reg do, re, mi, fa, sol, la, si
+);
+
+reg count_0, count_1, count_2, count_3, count_4, count_5, count_6, count_7;
+parameter DO = CLOCK/(261.6255*SAMPLE_SIZE);
+endmodule

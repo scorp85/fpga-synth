@@ -1,0 +1,15 @@
+module dac1bit(clk, data, out);
+	input clk;
+	input [11:0] data;
+	output out;
+	reg [12:0] accumulator;
+
+	initial begin
+		accumulator = 0;
+	end
+
+	always @(posedge clk)
+		accumulator <= accumulator[11:0] + data;
+
+	assign out = accumulator[12];
+endmodule
